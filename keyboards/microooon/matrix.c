@@ -1,5 +1,6 @@
 /*
 Copyright 2012-2018 Jun Wako, Jack Humbert, Yiancar
+Modified 2022 nyarurato
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -14,6 +15,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
@@ -154,16 +156,6 @@ __attribute__((weak)) void matrix_read_cols_on_row(matrix_row_t current_matrix[]
         //current_row_value |= pin_state ? 0 : row_shifter;
 
         current_row_value |= pin_state ? 0 : (MATRIX_ROW_SHIFTER << col_index);
-        /*
-        if (readMatrixPin(col_pins[col_index]) == 0) {
-            // Pin LO, set col bit
-            current_matrix[current_row] |= (MATRIX_ROW_SHIFTER << col_index);
-            key_pressed = true;
-        } else {
-            // Pin HI, clear col bit
-            current_matrix[current_row] &= ~(MATRIX_ROW_SHIFTER << col_index);
-        }
-        */
     }
 
     // Unselect row
@@ -220,7 +212,7 @@ __attribute__((weak)) void matrix_init_pins(void) {
 
 }
 
-void matrix_init(void) {//必要
+void matrix_init(void) {
     // initialize key pins
     matrix_init_pins();
 
@@ -234,7 +226,7 @@ void matrix_init(void) {//必要
 
 }
 
-uint8_t matrix_scan(void) {//必要
+uint8_t matrix_scan(void) {
     matrix_row_t curr_matrix[MATRIX_ROWS] = {0};
 
     // Set row, read cols
