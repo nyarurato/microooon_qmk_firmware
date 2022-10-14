@@ -19,4 +19,5 @@ AUDIO_ENABLE = no           # Audio output
 CUSTOM_MATRIX = lite
 SRC += matrix.c
 VIA_ENABLE = yes
+POINTING_DEVICE_ENABLE = no
 #CONSOLE_ENABLE = yes

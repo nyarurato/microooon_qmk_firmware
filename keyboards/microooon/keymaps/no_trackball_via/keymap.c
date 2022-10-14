@@ -3,6 +3,8 @@
 
 #include QMK_KEYBOARD_H
 
+#undef ACTIVATE_TRACKBALL
+
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
     _BASE,
