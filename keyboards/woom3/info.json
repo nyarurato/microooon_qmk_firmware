@@ -1,7 +1,7 @@
 {
     "manufacturer": "woom3",
     "keyboard_name": "woom3",
-    "maintainer": "woom3",
+    "maintainer": "nyarurato",
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
     "features": {
@@ -14,7 +14,7 @@
     },
     "matrix_pins": {
         "cols": [],
-        "rows": ["GP3", "GP4", "GP5", "GP6"]
+        "rows": ["GP16", "GP17", "GP18", "GP19"]
     },
     "processor": "RP2040",
     "url": "",

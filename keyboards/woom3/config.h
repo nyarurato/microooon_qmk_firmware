@@ -29,12 +29,12 @@
 #define MATRIX_ROWS 1
 #define MATRIX_COLS 4
 
-#define ENCODERS_PAD_A { GP0 }
-#define ENCODERS_PAD_B { GP1 }
+#define ENCODERS_PAD_A { GP13 }
+#define ENCODERS_PAD_B { GP12 }
 
 #define RGB_DI_PIN GP15
 #ifdef RGB_DI_PIN
-#    define RGBLED_NUM 12
+#    define RGBLED_NUM 15
 #    define RGBLIGHT_HUE_STEP 8
 #    define RGBLIGHT_SAT_STEP 8
 #    define RGBLIGHT_VAL_STEP 8
@@ -46,4 +46,4 @@
 #define RGBLIGHT_EFFECT_TWINKLE_LIFE 100
 #endif
 
-#define DIRECT_PINS {{GP3, GP4, GP5, GP6}}
+#define DIRECT_PINS {{GP16, GP17, GP18, GP19}}

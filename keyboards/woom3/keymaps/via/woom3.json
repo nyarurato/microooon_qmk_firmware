@@ -1,0 +1,14 @@
+{
+	"name": "woom3",
+	"vendorId": "0x4E59",
+	"productId": "0x5257",
+	"lighting": "qmk_rgblight",
+	"matrix": { "rows": 1, "cols": 4 },
+	"layouts": {
+		"keymap": [
+			[{"x":1},"0,3"],
+			["0,2",{"x":1},"0,0"],
+			[{"x":1},"0,1"]
+		]
+	}
+}

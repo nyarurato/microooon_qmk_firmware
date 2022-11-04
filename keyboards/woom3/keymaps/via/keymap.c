@@ -14,15 +14,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [0] = LAYOUT(
         KC_P0,   KC_P1,   KC_P2,   KC_P3
-    ),
-    [1] = LAYOUT(
-        KC_NC,   KC_NC,   KC_NC,   KC_NC
-    ),
-    [2] = LAYOUT(
-        KC_NC,   KC_NC,   KC_NC,   KC_NC
-    ),
-    [3] = LAYOUT(
-        KC_NC,   KC_NC,   KC_NC,   KC_NC
     )
 };
 
@@ -33,7 +24,6 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         } else {
             tap_code(KC_WH_D);
         }
-    
     } 
     return false;
 }
